@@ -6,10 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.utility.DriverSingleton;
+
 import java.util.List;
 
 public class ProductListingSteps {  
-    WebDriver driver = new ChromeDriver(); 
+    WebDriver driver = DriverSingleton.getDriver();
 
     @Given("I am on the inventory page")
     public void i_am_on_the_inventory_page() {

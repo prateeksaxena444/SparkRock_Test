@@ -5,8 +5,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/features",
-    glue = {"steps"},
+    features = "src\main\java\com\sparkrocktest\swaglabs\features\swaglabs.feature",
+    glue = {"src\main\java\com\sparkrocktest\swaglabs\stepdefinetions\"},
     plugin = {"pretty", "html:target/cucumber-reports.html", "json:target/cucumber-reports.json"},
     monochrome = true,
     tags = "@product_listing or @cart_operations"

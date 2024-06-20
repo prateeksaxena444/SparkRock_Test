@@ -6,11 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.utility.DriverSingleton;
+
 import java.util.List;
 
 public class CartOperationsSteps {
-    WebDriver driver = new ChromeDriver();
-
+    WebDriver driver = DriverSingleton.getDriver();
+    
     @When("I click the {string} button for a product")
     public void i_click_the_button_for_a_product(String button) {
         List<WebElement> buttons = driver.findElements(By.className("btn_inventory"));

@@ -5,8 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.utility.DriverSingleton;
+
 public class LoginSteps {
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver = DriverSingleton.getDriver();
 
     @Given("I am on the SauceDemo login page")
     public void i_am_on_the_SauceDemo_login_page() {
