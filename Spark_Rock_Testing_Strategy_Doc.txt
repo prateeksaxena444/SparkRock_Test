@@ -1,0 +1,103 @@
+Here is the Loom Video link, you can use this link to register to loom you will be redirected to my workspace and you will be able to see the video. - https://loom.com/invite/912982f4c7294b3db22b6c458f5668d2
+
+Application under test here is - https://www.saucedemo.com/
+
+1. Introduction
+This document outlines the functional testing strategy for two critical modules of our Application: Product Listing and Cart Operations. These modules are vital for the user experience and overall functionality of the website.
+
+2. Objectives
+Verify the correctness and usability of the Product Listing and Cart Operations modules.
+Ensure these modules work correctly across different browsers and devices.
+
+3. Scope
+Display and interaction with product listings.
+Operations related to adding and removing products from the cart.
+
+4. Module Selection Rationale
+Product Listing: This module is crucial as it displays the core content of the inventory page. Users interact with product listings to view and select items for purchase. Any issues here can directly affect user engagement and satisfaction.
+
+Cart Operations: This module handles adding and removing items from the cart, a fundamental part of the e-commerce functionality. Errors in cart operations can lead to transaction failures, user frustration, and loss of sales.
+
+5. Functional Testing Approach
+
+Test Case 1: Display Products
+Test Case ID: PL-01
+Description: Verify that all products are displayed with correct details (name, price, image, description).
+Preconditions: User is logged in and navigated to the inventory page.
+Test Steps:
+Navigate to the inventory page.
+Verify that each product has the following details:
+Name
+Price
+Image
+Description
+Expected Result: All products are displayed with the correct name, price, image, and description.
+
+Test Case 2: Product Sorting
+Test Case ID: PL-02
+Description: Verify that product sorting options work correctly.
+Preconditions: User is logged in and navigated to the inventory page.
+Test Steps:
+Navigate to the inventory page.
+Select "Name (A to Z)" from the sorting dropdown.
+Verify that products are sorted alphabetically by name in ascending order.
+Select "Name (Z to A)" from the sorting dropdown.
+Verify that products are sorted alphabetically by name in descending order.
+Select "Price (low to high)" from the sorting dropdown.
+Verify that products are sorted by price in ascending order.
+Select "Price (high to low)" from the sorting dropdown.
+Verify that products are sorted by price in descending order.
+Expected Result: Products are sorted according to the selected sorting option.
+
+Test Case 3: View Product Details
+Test Case ID: PL-03
+Description: Verify that clicking on a product shows the correct details.
+Preconditions: User is logged in and navigated to the inventory page.
+Test Steps:
+Navigate to the inventory page.
+Click on a product.
+Verify that the product details page displays the following information:
+Name
+Price
+Image
+Description
+Compare the details on the product page with those on the product listing.
+Expected Result: Product details page shows the correct name, price, image, and description.
+
+2. Cart Operations Module
+
+Test Case 4: Add to Cart
+Test Case ID: CO-01
+Description: Verify that products can be added to the cart.
+Preconditions: User is logged in and navigated to the inventory page.
+Test Steps:
+Navigate to the inventory page.
+Click 'Add to cart' button for a product.
+Verify that the 'Add to cart' button changes to 'Remove' for the added product.
+Verify that the cart icon updates with the correct number of items.
+Expected Result: Product is added to the cart, 'Add to cart' button changes to 'Remove', and the cart icon updates correctly.
+
+Test Case 5: Remove from Cart
+Test Case ID: CO-02
+Description: Verify that products can be removed from the cart.
+Preconditions: User is logged in, navigated to the inventory page, and has added products to the cart.
+Test Steps:
+Add a product to the cart if not already added.
+Click 'Remove' button for the product in the cart.
+Verify that the 'Remove' button changes back to 'Add to cart' for the removed product.
+Verify that the cart icon updates with the correct number of items.
+Expected Result: Product is removed from the cart, 'Remove' button changes back to 'Add to cart', and the cart icon updates correctly.
+
+Test Case 6: View Cart
+Test Case ID: CO-03
+Description: Verify that users can view items in the cart.
+Preconditions: User is logged in, navigated to the inventory page, and has added products to the cart.
+Test Steps:
+Add products to the cart if not already added.
+Click on the cart icon.
+Verify that the cart page displays the added products with correct details (name, price, quantity).
+Expected Result: Cart page displays the correct products with their details.
+
+6. Test Data
+Product Data: Use a variety of products with different names, prices, and descriptions.
+User Accounts: Test with multiple user accounts with different permissions.
